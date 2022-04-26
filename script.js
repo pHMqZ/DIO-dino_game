@@ -45,9 +45,9 @@ function createCactus() {
 
     cactus.classList.add('cactus');
     background.appendChild(cactus);
-    cactus.style.left = 1000 + 'px';
+    cactus.style.left = cactusPosition + 'px';
 
-    let leftTimer = setInteral(() => {
+    let leftTimer = setInterval(() => {
         if (cactusPosition < -60) {
             clearInterval(leftTimer);
             background.removeChild(cactus);
